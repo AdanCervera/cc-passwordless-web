@@ -14,7 +14,6 @@ export class HttpService {
   private getHeaders(): HttpHeaders {
     let headers = new HttpHeaders();
     
-    // Agregar token a los headers si existe en memoria
     const token = localStorage.getItem('token');
     if (token) {
       headers = headers.append('Authorization', `Bearer ${token}`);
