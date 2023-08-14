@@ -4,11 +4,13 @@ import { RequestMagicLinkComponent } from './features/authentication/request-mag
 import { AuthenticationComponent } from './features/authentication/authentication.component';
 import { AccessGrantedComponent } from './features/access-granted/access-granted.component';
 import { AuthGuard } from './general/guards/auth-guard';
+import { ContractsComponent } from './features/constracts/contracts.component';
 
 const routes: Routes = [
   { path: '', component: RequestMagicLinkComponent},
   { path: 'authentication', component: AuthenticationComponent},
-  { path: 'access-granted', component: AccessGrantedComponent, canActivate: [AuthGuard]}
+  { path: 'access-granted', component: AccessGrantedComponent, canActivate: [AuthGuard]},
+  { path: 'contracts', component: ContractsComponent}
 
 ];
 

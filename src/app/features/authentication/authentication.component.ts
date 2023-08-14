@@ -33,6 +33,7 @@ ngOnInit(): void {
           catchError((error: HttpErrorResponse) => {
             if (error.status === 401) {
               this.message = 'Unauthorized. Please generate another token.';
+              localStorage.removeItem('token');
             } else {
               this.message = 'An error occurred while attempting to log in. Please generate another token.';
             }

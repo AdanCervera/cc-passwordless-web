@@ -13,12 +13,15 @@ import { HttpClientModule } from '@angular/common/http';
 import { AuthenticationComponent } from './features/authentication/authentication.component';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
 import { AccessGrantedComponent } from './features/access-granted/access-granted.component';
+import { ContractsComponent } from './features/constracts/contracts.component';
+import { MatTableModule } from '@angular/material/table';
 @NgModule({
   declarations: [
     AppComponent,
     RequestMagicLinkComponent,
     AuthenticationComponent,
-    AccessGrantedComponent
+    AccessGrantedComponent,
+    ContractsComponent
   ],
   imports: [
     BrowserModule,
@@ -29,7 +32,8 @@ import { AccessGrantedComponent } from './features/access-granted/access-granted
     MatInputModule, 
     ReactiveFormsModule,
     HttpClientModule,
-    MatProgressBarModule
+    MatProgressBarModule,
+    MatTableModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
